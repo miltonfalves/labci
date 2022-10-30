@@ -20,4 +20,10 @@ jobs:
 #        password: ${{secrets.PASSWORD_DOCKER_HUB}}
 
     - name: teste do secret
-      run: echo ${{ secrets.TEST }}
+      run: |
+        if [ "$TESTE" -eq "testsecret" ]
+        then
+            echo "Funcionou"
+        fi
+      env:
+        TESTE: ${{ secrets.TEST }}
