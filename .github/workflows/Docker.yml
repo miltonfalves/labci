@@ -22,7 +22,7 @@ jobs:
       uses: docker/login-action@v2.1.0
       with:
         username: miltonalves
-        password: ${{ secrets.senhadh }}
+        password: ${{ secrets.SENHADH }}
     
     - name: Build and push Docker images
       uses: docker/build-push-action@v3.1.1
